@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Task 2 - Interactive Calculator</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h2>Interactive Calculator</h2>
+
+    <div class="calc-box">
+
+        <!-- Input fields -->
+        <p>Enter First Number:</p>
+        <input type="number" id="num1" placeholder="Enter number" />
+
+        <p>Enter Second Number:</p>
+        <input type="number" id="num2" placeholder="Enter number" />
+
+        <!-- Dropdown for operation -->
+        <p>Select Operation:</p>
+        <select id="operator">
+            <option value="add">+ Addition</option>
+            <option value="sub">- Subtraction</option>
+            <option value="mul">* Multiplication</option>
+            <option value="div">/ Division</option>
+        </select>
+
+        <br /><br />
+
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="resetCalc()">Reset</button>
+
+        <!-- Result will show here -->
+        <div id="result"></div>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

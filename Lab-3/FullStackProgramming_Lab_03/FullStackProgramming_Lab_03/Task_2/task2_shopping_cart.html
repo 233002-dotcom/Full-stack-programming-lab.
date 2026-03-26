@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Task 2 – Online Shopping Cart</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="task2_style.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Shopping Cart</h1>
+    <p>Lab Task 2 — Rest, Spread &amp; Destructuring</p>
+  </div>
+  <p>Click products to add them →</p>
+</header>
+
+<div class="layout">
+  <!-- Products -->
+  <div class="panel">
+    <div class="panel-title">Products <span>Store</span></div>
+    <div class="product-list" id="productList"></div>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="panel">
+    <div class="panel-title">Cart Summary <span>ES6</span></div>
+    <div class="cart-summary" id="cartSummary">
+      <p style="color:var(--muted);font-size:0.85rem;">Add products to see cart details.</p>
+    </div>
+  </div>
+</div>
+
+<script src="task2_script.js"></script>
+</body>
+</html>
