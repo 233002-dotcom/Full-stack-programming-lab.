@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Task 3 – Async Data Loader</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="task3_style.css">
+</head>
+<body>
+
+<header>
+  <h1>Async Data <span>Loader</span></h1>
+  <p>Lab Task 3 — Promises · .then() · .catch() · setTimeout()</p>
+</header>
+
+<div class="container">
+
+  <!-- Code hint -->
+  <div class="code-hint">
+    <span class="kw">function</span> <span class="fn">fetchUsers</span>() {
+    <span class="kw">return new</span> <span class="fn">Promise</span>((resolve, reject) =&gt; {
+      <span class="fn">setTimeout</span>(() =&gt; { success ? <span class="fn">resolve</span>(users) : <span class="fn">reject</span>(<span class="str">"Error"</span>) }, <span class="str">3000</span>)
+    })}<span class="fn">.then</span>(data =&gt; display(data))<span class="fn">.catch</span>(err =&gt; showError(err));
+  </div>
+
+  <!-- Control Panel -->
+  <div class="control-panel">
+    <div class="toggle-group">
+      <label class="toggle">
+        <input type="checkbox" id="successToggle" checked>
+        <span class="slider"></span>
+      </label>
+      <label for="successToggle">Simulate Server Response:</label>
+      <span class="status-text" id="toggleLabel">FAIL</span>
+    </div>
+    <button class="fetch-btn" id="fetchBtn" onclick="startFetch()">
+      ⟳ Fetch Users
+    </button>
+  </div>
+
+  <!-- Status / Loading -->
+  <div class="status-area" id="statusArea">
+    <div class="spinner" id="spinner"></div>
+    <div>
+      <div class="status-msg" id="statusMsg">Connecting to server...</div>
+      <div style="margin-top:8px;">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error -->
+  <div class="error-box" id="errorBox"></div>
+
+  <!-- Results -->
+  <div id="resultsSection" style="display:none">
+    <div class="result-header">
+      <div class="result-title">Loaded Users</div>
+      <div class="result-badge" id="userCount">0 users</div>
+    </div>
+    <div class="user-grid" id="userGrid"></div>
+  </div>
+
+</div>
+
+<script src="task3_script.js"></script>
+</body>
+</html>

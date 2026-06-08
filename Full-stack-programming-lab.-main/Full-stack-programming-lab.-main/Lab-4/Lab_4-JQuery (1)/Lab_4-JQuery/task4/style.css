@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-btn:hover {
+    color: #007bff;
+}
+
+.tab-btn.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+}
+
+.content-container {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 4px;
+    scroll-behavior: smooth; /* Modern CSS smooth scroll */
+}
+
+.content-section {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section h2 {
+    color: #007bff;
+}

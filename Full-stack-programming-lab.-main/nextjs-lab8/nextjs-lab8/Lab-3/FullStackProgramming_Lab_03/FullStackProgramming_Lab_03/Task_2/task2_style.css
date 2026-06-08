@@ -1,0 +1,203 @@
+/* ================================================
+   Task 2 - Online Shopping Cart
+   style.css
+   ================================================ */
+
+:root {
+  --bg: #f8f9fc;
+  --surface: #ffffff;
+  --dark: #1a1209;
+  --accent: #c9773a;
+  --accent2: #2d6a4f;
+  --border: #e2e8f0;
+  --muted: #8a7e72;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+header {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  border-bottom: 2px solid var(--dark);
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+header p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Layout */
+.layout {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+}
+
+@media(max-width: 700px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+/* Panel */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.panel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-title span {
+  background: var(--dark);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Product list */
+.product-list { display: flex; flex-direction: column; gap: 12px; }
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.product-item:hover { background: #f5f0ea; }
+.product-item.in-cart { border-color: var(--accent2); background: #f0faf5; }
+
+.prod-name { font-weight: 500; font-size: 0.9rem; }
+.prod-price { color: var(--accent); font-weight: 500; font-size: 0.85rem; }
+
+.add-btn {
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+
+.add-btn:hover { background: var(--accent); }
+.add-btn.added { background: var(--accent2); }
+
+/* Cart summary */
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-block {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.info-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.first-item-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.remaining-list { list-style: none; }
+
+.remaining-list li {
+  font-size: 0.82rem;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--border);
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.remaining-list li:last-child { border-bottom: none; }
+
+.total-count {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--dark);
+}
+
+.reset-btn {
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--dark);
+  color: var(--dark);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover { background: var(--dark); color: #fff; }
+
+.tag {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid var(--border);
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Interactive Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Interactive Form Validation</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username">
+                <span class="error-msg" id="usernameError">Username must be at least 3 characters.</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email">
+                <span class="error-msg" id="emailError">Invalid email format.</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+                <span class="error-msg" id="passwordError">Password must be at least 6 characters.</span>
+            </div>
+            <button type="submit" id="submitBtn">Register</button>
+        </form>
+        <div id="successMessage">Registration successful!</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

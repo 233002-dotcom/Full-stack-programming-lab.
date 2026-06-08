@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Task 1 - Dynamic Quiz</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h2>Dynamic Quiz</h2>
+
+    <div class="quiz-box">
+
+        <!-- Question 1 -->
+        <p>1. What is 5 + 5?</p>
+        <input type="text" id="q1" placeholder="Your answer" />
+
+        <!-- Question 2 -->
+        <p>2. Capital of Pakistan?</p>
+        <input type="text" id="q2" placeholder="Your answer" />
+
+        <!-- Question 3 -->
+        <p>3. Which language is used for web interactivity?</p>
+        <input type="text" id="q3" placeholder="Your answer" />
+
+        <br /><br />
+
+        <button onclick="checkQuiz()">Submit Quiz</button>
+        <button onclick="resetQuiz()">Reset Quiz</button>
+
+        <!-- Result will show here -->
+        <div id="result"></div>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

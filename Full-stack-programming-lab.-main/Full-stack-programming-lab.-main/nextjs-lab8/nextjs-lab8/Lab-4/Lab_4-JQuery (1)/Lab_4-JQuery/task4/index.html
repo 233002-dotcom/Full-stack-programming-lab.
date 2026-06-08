@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4: Tabbed Content with Smooth Scroll</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tabbed Content with Smooth Scroll</h1>
+        <nav class="tabs">
+            <button class="tab-btn active" data-target="#home">Home</button>
+            <button class="tab-btn" data-target="#about">About</button>
+            <button class="tab-btn" data-target="#services">Services</button>
+            <button class="tab-btn" data-target="#contact">Contact</button>
+        </nav>
+        <div class="content-container">
+            <section id="home" class="content-section active">
+                <h2>Home Section</h2>
+                <p>Welcome to our home page. This section contains the main overview of our website.</p>
+            </section>
+            <section id="about" class="content-section">
+                <h2>About Section</h2>
+                <p>Learn more about who we are and what we do. Our team is dedicated to providing the best service.</p>
+            </section>
+            <section id="services" class="content-section">
+                <h2>Services Section</h2>
+                <p>Explore the wide range of services we offer to our clients. We cover everything from design to development.</p>
+            </section>
+            <section id="contact" class="content-section">
+                <h2>Contact Section</h2>
+                <p>Get in touch with us for any inquiries or support. We are here to help you with your needs.</p>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
